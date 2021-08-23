@@ -10,18 +10,37 @@ import SDWebImage
 import Cosmos
 
 import youtube_ios_player_helper
+import CoreData
 
 
 class MovieDetailsViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
     
     
+    @IBAction func favBtn(_ sender: Any) {
+        
+
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Favorite", in: managedObjectContext)!
+        
+        let DBmanager = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+        
+        
+        DBmanager.setValue(movie.name, forKey: "name")
+        DBmanager.setValue(movie.poster, forKey: "poster")
+        
+        
+        
+    }
     
     
     
-    
-    
-    
+    var appDelegate:AppDelegate!
+    var managedObjectContext : NSManagedObjectContext!
+
+    var coreDataMovieArray : [NSManagedObject] = []
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
+
     var movie : Movie!
 //    var name : String!
 //    var image : Any!
@@ -37,6 +56,33 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
        @IBOutlet var reviews: UILabel!
     
     
+       @IBAction func seeMoreBtn(_ sender: Any) {
+        
+        if let rv = storyboard?.instantiateViewController(identifier: "RV") as? ReviewsViewController {
+            
+            
+            
+            for i in reviewsList {
+                
+                rv.value = i.content + rv.value
+                
+                
+                
+            }
+            
+            
+            
+            
+
+
+          
+            
+            self.navigationController?.pushViewController(rv, animated: true)
+
+        }
+        
+        
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,7 +116,18 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
     override func viewDidLoad() {
         
         
+        fetchData()
+
+      
+        
+        checkFav()
+        appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+
+        managedObjectContext = appDelegate.persistentContainer.viewContext
+        
         super.viewDidLoad()
+        
+        
         
 
         trailersCollection.dataSource = self
@@ -87,10 +144,9 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
                stars.text = "(\(movie.voteCount))"
                poster.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w185/\(movie.poster!)") , placeholderImage: UIImage(systemName:"exclamationmark.triangle.fill"))
         descLabel.text = movie.description
-        reviews.text = reviewsList[0].content
+        reviews.text = String(reviewsList.count)
         //
 
-        fetchData()
        
 
         
@@ -106,6 +162,8 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
             
             if unwrappedMealArray != nil {
                 
+                
+             
                 
                 self.trailersList = unwrappedMealArray!
                 
@@ -133,13 +191,19 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
             if unwrappedMealArray != nil {
                 
                 
-                self.reviewsList = unwrappedMealArray!
+                
                 
                 
                 DispatchQueue.main.async {
-                    self.trailersCollection.reloadData()
                     
                     
+                    self.reviewsList = unwrappedMealArray!
+
+                    self.reviews.text = String(self.reviewsList[0].content)
+                    
+
+                    
+
                     
                 }
                 
@@ -156,6 +220,40 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
         
         
         
+    }
+    
+    var objectContext : NSManagedObjectContext!
+
+    
+    func checkFav(){
+        
+        appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+
+        
+
+        objectContext = appDelegate.persistentContainer.viewContext
+
+        
+        
+        coreDataMovieArray  = try! self.objectContext.fetch(fetchRequest)
+
+           for emo in coreDataMovieArray {
+            if(emo.value(forKey: "name") as! String == movie.name){
+                
+                
+                print("Movie in Fav")
+                
+                
+            }
+
+
+
+
+
+
+
+
+                     }
     }
     
     

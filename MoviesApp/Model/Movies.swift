@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct PopularMovieResult: Decodable {
+struct PopularMovieResult: Decodable  {
  
   let results: [Movie]
   
@@ -16,7 +16,7 @@ struct PopularMovieResult: Decodable {
 
 
 
-struct Movie: Decodable {
+struct Movie: Decodable , Encodable {
   let name: String
   let description: String
   let voteCount: Int

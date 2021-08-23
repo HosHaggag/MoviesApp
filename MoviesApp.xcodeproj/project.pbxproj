@@ -18,6 +18,9 @@
 		9F3676A726BC31C600EF6DD5 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3676A626BC31C600EF6DD5 /* MoviesAppUITests.swift */; };
 		9F3991B326CBDD3F002A5A5D /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */; };
 		9F8D2B5C26CFDE4D00B6645E /* TrailerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */; };
+		9FA90EA826D2A45B00F28414 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EA726D2A45B00F28414 /* ReviewsViewController.swift */; };
+		9FA90EAD26D2EE5E00F28414 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EAC26D2EE5E00F28414 /* FavoriteTableViewController.swift */; };
+		9FA90EB226D2EEA900F28414 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EB126D2EEA900F28414 /* FavoriteTableViewCell.swift */; };
 		9FAADF3A26CF2184006D97D3 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAADF3926CF2184006D97D3 /* Trailer.swift */; };
 		9FAADF3F26CF2423006D97D3 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAADF3E26CF2423006D97D3 /* Review.swift */; };
 		9FB1784A26C2A51B0011CDAE /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1784926C2A51B0011CDAE /* HomeCollectionViewController.swift */; };
@@ -63,6 +66,9 @@
 		9F3676A826BC31C600EF6DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FA90EA726D2A45B00F28414 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		9FA90EAC26D2EE5E00F28414 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		9FA90EB126D2EEA900F28414 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		9FAADF3926CF2184006D97D3 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		9FAADF3E26CF2423006D97D3 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		9FB1784926C2A51B0011CDAE /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,9 @@
 				9FB1784E26C2A9970011CDAE /* MovieCell.swift */,
 				9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */,
 				9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */,
+				9FA90EA726D2A45B00F28414 /* ReviewsViewController.swift */,
+				9FA90EAC26D2EE5E00F28414 /* FavoriteTableViewController.swift */,
+				9FA90EB126D2EEA900F28414 /* FavoriteTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,9 +401,12 @@
 				9F8D2B5C26CFDE4D00B6645E /* TrailerCollectionViewCell.swift in Sources */,
 				9F3991B326CBDD3F002A5A5D /* MovieDetailsViewController.swift in Sources */,
 				9F36768626BC31C400EF6DD5 /* ViewController.swift in Sources */,
+				9FA90EA826D2A45B00F28414 /* ReviewsViewController.swift in Sources */,
+				9FA90EAD26D2EE5E00F28414 /* FavoriteTableViewController.swift in Sources */,
 				9F36768226BC31C400EF6DD5 /* AppDelegate.swift in Sources */,
 				9FB1784F26C2A9970011CDAE /* MovieCell.swift in Sources */,
 				9FAADF3F26CF2423006D97D3 /* Review.swift in Sources */,
+				9FA90EB226D2EEA900F28414 /* FavoriteTableViewCell.swift in Sources */,
 				9FB1785526C2B4330011CDAE /* ConnectionHandler.swift in Sources */,
 				9F36768C26BC31C400EF6DD5 /* MoviesApp.xcdatamodeld in Sources */,
 				9FB1786326C2B4BB0011CDAE /* Movies.swift in Sources */,
