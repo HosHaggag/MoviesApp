@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct PopularMovieResult: Decodable  {
+struct PopularMovieResult: Decodable , Encodable {
  
   let results: [Movie]
   

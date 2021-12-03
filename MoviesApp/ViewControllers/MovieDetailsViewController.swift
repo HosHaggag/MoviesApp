@@ -29,22 +29,24 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
         DBmanager.setValue(movie.name, forKey: "name")
         DBmanager.setValue(movie.poster, forKey: "poster")
         
+        let alertController = UIAlertController(title: "Added to Favorite", message: "Movie Added To Favorite Succefully", preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+        
         
         
     }
     
     
     
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
     var appDelegate:AppDelegate!
     var managedObjectContext : NSManagedObjectContext!
-
     var coreDataMovieArray : [NSManagedObject] = []
-    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
-
     var movie : Movie!
-//    var name : String!
-//    var image : Any!
-//    var id : Int!
     var trailersList : [Trailer] = []
     var reviewsList : [Review] = []
        @IBOutlet var descLabel: UILabel!
@@ -57,32 +59,15 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
     
     
        @IBAction func seeMoreBtn(_ sender: Any) {
-        
         if let rv = storyboard?.instantiateViewController(identifier: "RV") as? ReviewsViewController {
-            
-            
-            
             for i in reviewsList {
-                
                 rv.value = i.content + rv.value
-                
-                
-                
             }
-            
-            
-            
-            
-
-
-          
-            
             self.navigationController?.pushViewController(rv, animated: true)
-
         }
-        
-        
     }
+    
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -92,9 +77,7 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 400, height: 320)
     }
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "trail", for: indexPath) as! TrailerCollectionViewCell
@@ -115,39 +98,30 @@ class MovieDetailsViewController: UIViewController , UICollectionViewDataSource,
 
     override func viewDidLoad() {
         
+        appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        managedObjectContext = appDelegate.persistentContainer.viewContext
+
         
         fetchData()
-
-      
-        
         checkFav()
-        appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-
-        managedObjectContext = appDelegate.persistentContainer.viewContext
-        
-        super.viewDidLoad()
-        
-        
-        
 
         trailersCollection.dataSource = self
         trailersCollection.delegate = self
         trailersCollection.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        
-        
+
         // Assign Values
 
         label.text = movie.name
         realase.text = "Relase at : \(movie.date!)"
         stars.rating = movie.voteAverage / 2
-               stars.text = "(\(movie.voteCount))"
-               poster.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w185/\(movie.poster!)") , placeholderImage: UIImage(systemName:"exclamationmark.triangle.fill"))
+        stars.text = "(\(movie.voteCount))"
+        poster.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w185/\(movie.poster!)") , placeholderImage: UIImage(systemName:"exclamationmark.triangle.fill"))
         descLabel.text = movie.description
         reviews.text = String(reviewsList.count)
         //
 
-       
+        super.viewDidLoad()
+
 
         
 

@@ -17,13 +17,16 @@
 		9F36769C26BC31C500EF6DD5 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36769B26BC31C500EF6DD5 /* MoviesAppTests.swift */; };
 		9F3676A726BC31C600EF6DD5 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3676A626BC31C600EF6DD5 /* MoviesAppUITests.swift */; };
 		9F3991B326CBDD3F002A5A5D /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */; };
+		9F3AC2A8275AC85C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AC2A7275AC85B0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png */; };
+		9F3AC2AD275AC86F0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AC2AC275AC86F0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png */; };
+		9F3AC2B2275AC8760067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AC2B1275AC8760067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png */; };
+		9F3AC2B7275AC87C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AC2B6275AC87C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png */; };
 		9F8D2B5C26CFDE4D00B6645E /* TrailerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */; };
 		9FA90EA826D2A45B00F28414 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EA726D2A45B00F28414 /* ReviewsViewController.swift */; };
 		9FA90EAD26D2EE5E00F28414 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EAC26D2EE5E00F28414 /* FavoriteTableViewController.swift */; };
 		9FA90EB226D2EEA900F28414 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA90EB126D2EEA900F28414 /* FavoriteTableViewCell.swift */; };
 		9FAADF3A26CF2184006D97D3 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAADF3926CF2184006D97D3 /* Trailer.swift */; };
 		9FAADF3F26CF2423006D97D3 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAADF3E26CF2423006D97D3 /* Review.swift */; };
-		9FB1784A26C2A51B0011CDAE /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1784926C2A51B0011CDAE /* HomeCollectionViewController.swift */; };
 		9FB1784F26C2A9970011CDAE /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1784E26C2A9970011CDAE /* MovieCell.swift */; };
 		9FB1785526C2B4330011CDAE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1785426C2B4330011CDAE /* ConnectionHandler.swift */; };
 		9FB1785D26C2B46B0011CDAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1785C26C2B46B0011CDAE /* Constants.swift */; };
@@ -65,13 +68,16 @@
 		9F3676A626BC31C600EF6DD5 /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		9F3676A826BC31C600EF6DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		9F3AC2A7275AC85B0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png"; sourceTree = "<group>"; };
+		9F3AC2AC275AC86F0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png"; sourceTree = "<group>"; };
+		9F3AC2B1275AC8760067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png"; sourceTree = "<group>"; };
+		9F3AC2B6275AC87C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png"; sourceTree = "<group>"; };
 		9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FA90EA726D2A45B00F28414 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		9FA90EAC26D2EE5E00F28414 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		9FA90EB126D2EEA900F28414 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		9FAADF3926CF2184006D97D3 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		9FAADF3E26CF2423006D97D3 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		9FB1784926C2A51B0011CDAE /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		9FB1784E26C2A9970011CDAE /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		9FB1785426C2B4330011CDAE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		9FB1785C26C2B46B0011CDAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		9F36768026BC31C400EF6DD5 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F3AC2A6275AC83F0067DC95 /* ScreenShots */,
 				9FB1786126C2B49E0011CDAE /* Model */,
 				9FB1785326C2B3ED0011CDAE /* Services */,
 				9F3676B826BC34EC00EF6DD5 /* Views */,
@@ -178,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				9F36768526BC31C400EF6DD5 /* ViewController.swift */,
-				9FB1784926C2A51B0011CDAE /* HomeCollectionViewController.swift */,
 				9FB1784E26C2A9970011CDAE /* MovieCell.swift */,
 				9F3991B226CBDD3F002A5A5D /* MovieDetailsViewController.swift */,
 				9F8D2B5B26CFDE4D00B6645E /* TrailerCollectionViewCell.swift */,
@@ -195,6 +201,17 @@
 				9F36768726BC31C400EF6DD5 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9F3AC2A6275AC83F0067DC95 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AC2B6275AC87C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png */,
+				9F3AC2B1275AC8760067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png */,
+				9F3AC2AC275AC86F0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png */,
+				9F3AC2A7275AC85B0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png */,
+			);
+			path = ScreenShots;
 			sourceTree = "<group>";
 		};
 		9FB1785326C2B3ED0011CDAE /* Services */ = {
@@ -329,8 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F36769126BC31C500EF6DD5 /* LaunchScreen.storyboard in Resources */,
+				9F3AC2A8275AC85C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.58.57.png in Resources */,
 				9F36768E26BC31C500EF6DD5 /* Assets.xcassets in Resources */,
 				9F36768926BC31C400EF6DD5 /* Main.storyboard in Resources */,
+				9F3AC2AD275AC86F0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 22.59.35.png in Resources */,
+				9F3AC2B7275AC87C0067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.22.png in Resources */,
+				9F3AC2B2275AC8760067DC95 /* Simulator Screen Shot - iPhone 11 - 2021-12-03 at 23.00.00.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +431,6 @@
 				9FB1785526C2B4330011CDAE /* ConnectionHandler.swift in Sources */,
 				9F36768C26BC31C400EF6DD5 /* MoviesApp.xcdatamodeld in Sources */,
 				9FB1786326C2B4BB0011CDAE /* Movies.swift in Sources */,
-				9FB1784A26C2A51B0011CDAE /* HomeCollectionViewController.swift in Sources */,
 				9F36768426BC31C400EF6DD5 /* SceneDelegate.swift in Sources */,
 				9FB1785D26C2B46B0011CDAE /* Constants.swift in Sources */,
 			);

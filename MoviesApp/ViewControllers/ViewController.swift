@@ -10,21 +10,22 @@ import SDWebImage
 
 class ViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     
-//    var list :[String] = ["Hossam" , "Marc"]
     
     let userDefults = UserDefaults.standard
     static var MOVIES_KEY = "movies"
+    
+    
+    
+    
+    
+    
+    
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
         if let vc = storyboard?.instantiateViewController(identifier: "VC") as? MovieDetailsViewController {
 
-
-//            vc.name = moviesList[indexPath.row].name
-//            vc.image  = moviesList[indexPath.row].poster
-//            vc.id = moviesList[indexPath.row].id
-         
             
             vc.movie = moviesList[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
@@ -50,14 +51,9 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         
         print(moviesList)
         
-//        collection.text.text = moviesList[indexPath.row].name
         
-        
-        
-//        cell.label.text = mealsArray[indexPath.row].mealName
         collection.img.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w185/\(moviesList[indexPath.row].poster!)") , placeholderImage: UIImage(systemName:"exclamationmark.triangle.fill"))
-//
-//
+
         
         return collection
     }
@@ -74,18 +70,24 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         moviesCollection.dataSource = self
         moviesCollection.delegate = self
-        
         moviesCollection.collectionViewLayout = UICollectionViewFlowLayout()
         
         
         
+        checkConnect()
+        
+        
+        
+    }
+    
+    
+    func checkConnect(){
+        
         if(Service.isConnectedToNetwork()){
             
-           
+           fetchData()
 
             
             print("Internet Connected")
@@ -105,14 +107,11 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
             
             print("Internet Not")
         }
-        
-        
-        
-        
-        
-        
-        
+    }
     
+    
+    func fetchData(){
+        
         Service().fetchDataFromApiByAlamofire() { (unwrappedMealArray, error ) in
             
             
@@ -121,21 +120,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
                 
                 self.moviesList = unwrappedMealArray!
                 
-                
-
-                
-                let encodedData = try? PropertyListEncoder().encode(unwrappedMealArray)
-
-                self.userDefults.set(encodedData, forKey: ViewController.MOVIES_KEY)
-                
-                print(self.userDefults.value(forKey: ViewController.MOVIES_KEY))
-                
-                
-//                let decodedObject  =  self.userDefults.value(forKey: ViewController.MOVIES_KEY)
-
-//                let decoded = try? JSONDecoder().decode([Movie].self, from: decodedObject as! Data)
-                
-                
+           
                 DispatchQueue.main.async {
                     
                     
@@ -152,9 +137,6 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
                 
             }
         }
-           
-        
-        
     }
     
 

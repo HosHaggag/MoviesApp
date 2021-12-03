@@ -12,12 +12,13 @@ import SystemConfiguration
 
 class Service {
   
-    
+    let userDefults = UserDefaults.standard
+
     func fetchDataFromApiByAlamofire(completion :@escaping ([Movie]?,String?)->Void){
         
         
         
-        
+
         
         let url = URL(string: "\(Const.link)/movie/popular?language=en-US&api_key=\(Const.apiKey)" )
   
@@ -31,9 +32,13 @@ class Service {
             
             if let data = dataResponse.data {
                 
-                
+
               let jsonDecoder = JSONDecoder()
                 if let decodedObj = try?jsonDecoder.decode(PopularMovieResult.self, from: data){
+                    
+                    let encodedData = try? PropertyListEncoder().encode(decodedObj)
+
+                    self.userDefults.set(encodedData, forKey: ViewController.MOVIES_KEY)
                     
                     
                     completion(decodedObj.results , nil)
